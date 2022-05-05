@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A784848728243CD70099E86E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784848628243CD70099E86E /* AppDelegate.swift */; };
+		A784848928243CD70099E86E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784848828243CD70099E86E /* SceneDelegate.swift */; };
+		A784848B28243CD70099E86E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784848A28243CD70099E86E /* ViewController.swift */; };
+		A784848E28243CD70099E86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A784848C28243CD70099E86E /* Main.storyboard */; };
+		A784849028243CD80099E86E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A784848F28243CD80099E86E /* Assets.xcassets */; };
+		A784849328243CD80099E86E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A784849128243CD80099E86E /* LaunchScreen.storyboard */; };
+		A784849E28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784849D28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift */; };
+		A78484A928243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78484A828243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A784849A28243CD90099E86E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A784847B28243CD70099E86E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A784848228243CD70099E86E;
+			remoteInfo = "Progetto Gioco con Strade";
+		};
+		A78484A528243CD90099E86E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A784847B28243CD70099E86E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A784848228243CD70099E86E;
+			remoteInfo = "Progetto Gioco con Strade";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A784848328243CD70099E86E /* Progetto Gioco con Strade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Progetto Gioco con Strade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A784848628243CD70099E86E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A784848828243CD70099E86E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A784848A28243CD70099E86E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A784848D28243CD70099E86E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A784848F28243CD80099E86E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A784849228243CD80099E86E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A784849428243CD80099E86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A784849928243CD90099E86E /* Progetto Gioco con StradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Progetto Gioco con StradeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A784849D28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progetto_Gioco_con_StradeTests.swift; sourceTree = "<group>"; };
+		A784849F28243CD90099E86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78484A428243CD90099E86E /* Progetto Gioco con StradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Progetto Gioco con StradeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78484A828243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progetto_Gioco_con_StradeUITests.swift; sourceTree = "<group>"; };
+		A78484AA28243CD90099E86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A784848028243CD70099E86E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A784849628243CD90099E86E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78484A128243CD90099E86E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A784847A28243CD70099E86E = {
+			isa = PBXGroup;
+			children = (
+				A784848528243CD70099E86E /* Progetto Gioco con Strade */,
+				A784849C28243CD90099E86E /* Progetto Gioco con StradeTests */,
+				A78484A728243CD90099E86E /* Progetto Gioco con StradeUITests */,
+				A784848428243CD70099E86E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A784848428243CD70099E86E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A784848328243CD70099E86E /* Progetto Gioco con Strade.app */,
+				A784849928243CD90099E86E /* Progetto Gioco con StradeTests.xctest */,
+				A78484A428243CD90099E86E /* Progetto Gioco con StradeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A784848528243CD70099E86E /* Progetto Gioco con Strade */ = {
+			isa = PBXGroup;
+			children = (
+				A784848628243CD70099E86E /* AppDelegate.swift */,
+				A784848828243CD70099E86E /* SceneDelegate.swift */,
+				A784848A28243CD70099E86E /* ViewController.swift */,
+				A784848C28243CD70099E86E /* Main.storyboard */,
+				A784848F28243CD80099E86E /* Assets.xcassets */,
+				A784849128243CD80099E86E /* LaunchScreen.storyboard */,
+				A784849428243CD80099E86E /* Info.plist */,
+			);
+			path = "Progetto Gioco con Strade";
+			sourceTree = "<group>";
+		};
+		A784849C28243CD90099E86E /* Progetto Gioco con StradeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A784849D28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift */,
+				A784849F28243CD90099E86E /* Info.plist */,
+			);
+			path = "Progetto Gioco con StradeTests";
+			sourceTree = "<group>";
+		};
+		A78484A728243CD90099E86E /* Progetto Gioco con StradeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A78484A828243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift */,
+				A78484AA28243CD90099E86E /* Info.plist */,
+			);
+			path = "Progetto Gioco con StradeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A784848228243CD70099E86E /* Progetto Gioco con Strade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78484AD28243CD90099E86E /* Build configuration list for PBXNativeTarget "Progetto Gioco con Strade" */;
+			buildPhases = (
+				A784847F28243CD70099E86E /* Sources */,
+				A784848028243CD70099E86E /* Frameworks */,
+				A784848128243CD70099E86E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Progetto Gioco con Strade";
+			productName = "Progetto Gioco con Strade";
+			productReference = A784848328243CD70099E86E /* Progetto Gioco con Strade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A784849828243CD90099E86E /* Progetto Gioco con StradeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78484B028243CD90099E86E /* Build configuration list for PBXNativeTarget "Progetto Gioco con StradeTests" */;
+			buildPhases = (
+				A784849528243CD90099E86E /* Sources */,
+				A784849628243CD90099E86E /* Frameworks */,
+				A784849728243CD90099E86E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A784849B28243CD90099E86E /* PBXTargetDependency */,
+			);
+			name = "Progetto Gioco con StradeTests";
+			productName = "Progetto Gioco con StradeTests";
+			productReference = A784849928243CD90099E86E /* Progetto Gioco con StradeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A78484A328243CD90099E86E /* Progetto Gioco con StradeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78484B328243CD90099E86E /* Build configuration list for PBXNativeTarget "Progetto Gioco con StradeUITests" */;
+			buildPhases = (
+				A78484A028243CD90099E86E /* Sources */,
+				A78484A128243CD90099E86E /* Frameworks */,
+				A78484A228243CD90099E86E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A78484A628243CD90099E86E /* PBXTargetDependency */,
+			);
+			name = "Progetto Gioco con StradeUITests";
+			productName = "Progetto Gioco con StradeUITests";
+			productReference = A78484A428243CD90099E86E /* Progetto Gioco con StradeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A784847B28243CD70099E86E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					A784848228243CD70099E86E = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					A784849828243CD90099E86E = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = A784848228243CD70099E86E;
+					};
+					A78484A328243CD90099E86E = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = A784848228243CD70099E86E;
+					};
+				};
+			};
+			buildConfigurationList = A784847E28243CD70099E86E /* Build configuration list for PBXProject "Progetto Gioco con Strade" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A784847A28243CD70099E86E;
+			productRefGroup = A784848428243CD70099E86E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A784848228243CD70099E86E /* Progetto Gioco con Strade */,
+				A784849828243CD90099E86E /* Progetto Gioco con StradeTests */,
+				A78484A328243CD90099E86E /* Progetto Gioco con StradeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A784848128243CD70099E86E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A784849328243CD80099E86E /* LaunchScreen.storyboard in Resources */,
+				A784849028243CD80099E86E /* Assets.xcassets in Resources */,
+				A784848E28243CD70099E86E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A784849728243CD90099E86E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78484A228243CD90099E86E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A784847F28243CD70099E86E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A784848B28243CD70099E86E /* ViewController.swift in Sources */,
+				A784848728243CD70099E86E /* AppDelegate.swift in Sources */,
+				A784848928243CD70099E86E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A784849528243CD90099E86E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A784849E28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78484A028243CD90099E86E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78484A928243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A784849B28243CD90099E86E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A784848228243CD70099E86E /* Progetto Gioco con Strade */;
+			targetProxy = A784849A28243CD90099E86E /* PBXContainerItemProxy */;
+		};
+		A78484A628243CD90099E86E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A784848228243CD70099E86E /* Progetto Gioco con Strade */;
+			targetProxy = A78484A528243CD90099E86E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A784848C28243CD70099E86E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A784848D28243CD70099E86E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A784849128243CD80099E86E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A784849228243CD80099E86E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A78484AB28243CD90099E86E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A78484AC28243CD90099E86E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A78484AE28243CD90099E86E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Progetto Gioco con Strade/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leonardo-Cappello.Progetto-Gioco-con-Strade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A78484AF28243CD90099E86E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Progetto Gioco con Strade/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leonardo-Cappello.Progetto-Gioco-con-Strade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A78484B128243CD90099E86E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Progetto Gioco con StradeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leonardo-Cappello.Progetto-Gioco-con-StradeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Progetto Gioco con Strade.app/Progetto Gioco con Strade";
+			};
+			name = Debug;
+		};
+		A78484B228243CD90099E86E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Progetto Gioco con StradeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leonardo-Cappello.Progetto-Gioco-con-StradeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Progetto Gioco con Strade.app/Progetto Gioco con Strade";
+			};
+			name = Release;
+		};
+		A78484B428243CD90099E86E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Progetto Gioco con StradeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leonardo-Cappello.Progetto-Gioco-con-StradeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Progetto Gioco con Strade";
+			};
+			name = Debug;
+		};
+		A78484B528243CD90099E86E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Progetto Gioco con StradeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leonardo-Cappello.Progetto-Gioco-con-StradeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Progetto Gioco con Strade";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A784847E28243CD70099E86E /* Build configuration list for PBXProject "Progetto Gioco con Strade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78484AB28243CD90099E86E /* Debug */,
+				A78484AC28243CD90099E86E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78484AD28243CD90099E86E /* Build configuration list for PBXNativeTarget "Progetto Gioco con Strade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78484AE28243CD90099E86E /* Debug */,
+				A78484AF28243CD90099E86E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78484B028243CD90099E86E /* Build configuration list for PBXNativeTarget "Progetto Gioco con StradeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78484B128243CD90099E86E /* Debug */,
+				A78484B228243CD90099E86E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78484B328243CD90099E86E /* Build configuration list for PBXNativeTarget "Progetto Gioco con StradeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78484B428243CD90099E86E /* Debug */,
+				A78484B528243CD90099E86E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A784847B28243CD70099E86E /* Project object */;
+}
