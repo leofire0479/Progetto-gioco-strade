@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Progetto Gioco con Strade
 //
-//  Created by Leonardo Cappello on 05/05/22.
+//  Created by Leonardo Cappello on 15/05/22.
 //
 
 import UIKit

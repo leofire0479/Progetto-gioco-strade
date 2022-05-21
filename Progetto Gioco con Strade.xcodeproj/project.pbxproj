@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A708AB2A283233DC0015656B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A708AB29283233DC0015656B /* ViewControllerHome.swift */; };
+		A722B624282D06B0000B4134 /* Partita.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722B623282D06B0000B4134 /* Partita.swift */; };
+		A722B626282D0D68000B4134 /* Tessera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722B625282D0D68000B4134 /* Tessera.swift */; };
+		A7778F822832E75600687036 /* Nodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7778F812832E75600687036 /* Nodo.swift */; };
 		A784848728243CD70099E86E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784848628243CD70099E86E /* AppDelegate.swift */; };
 		A784848928243CD70099E86E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784848828243CD70099E86E /* SceneDelegate.swift */; };
 		A784848B28243CD70099E86E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784848A28243CD70099E86E /* ViewController.swift */; };
@@ -15,6 +19,7 @@
 		A784849328243CD80099E86E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A784849128243CD80099E86E /* LaunchScreen.storyboard */; };
 		A784849E28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784849D28243CD90099E86E /* Progetto_Gioco_con_StradeTests.swift */; };
 		A78484A928243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78484A828243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift */; };
+		A788AADC2834407300A19F82 /* ViewControllerMazzo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788AADB2834407300A19F82 /* ViewControllerMazzo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A708AB29283233DC0015656B /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
+		A722B623282D06B0000B4134 /* Partita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partita.swift; sourceTree = "<group>"; };
+		A722B625282D0D68000B4134 /* Tessera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tessera.swift; sourceTree = "<group>"; };
+		A7778F812832E75600687036 /* Nodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodo.swift; sourceTree = "<group>"; };
 		A784848328243CD70099E86E /* Progetto Gioco con Strade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Progetto Gioco con Strade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A784848628243CD70099E86E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A784848828243CD70099E86E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,7 @@
 		A78484A428243CD90099E86E /* Progetto Gioco con StradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Progetto Gioco con StradeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78484A828243CD90099E86E /* Progetto_Gioco_con_StradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progetto_Gioco_con_StradeUITests.swift; sourceTree = "<group>"; };
 		A78484AA28243CD90099E86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A788AADB2834407300A19F82 /* ViewControllerMazzo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMazzo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				A784848628243CD70099E86E /* AppDelegate.swift */,
+				A722B623282D06B0000B4134 /* Partita.swift */,
+				A722B625282D0D68000B4134 /* Tessera.swift */,
 				A784848828243CD70099E86E /* SceneDelegate.swift */,
+				A708AB29283233DC0015656B /* ViewControllerHome.swift */,
 				A784848A28243CD70099E86E /* ViewController.swift */,
+				A7778F812832E75600687036 /* Nodo.swift */,
 				A784848C28243CD70099E86E /* Main.storyboard */,
+				A788AADB2834407300A19F82 /* ViewControllerMazzo.swift */,
 				A784848F28243CD80099E86E /* Assets.xcassets */,
 				A784849128243CD80099E86E /* LaunchScreen.storyboard */,
 				A784849428243CD80099E86E /* Info.plist */,
@@ -259,8 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A784848B28243CD70099E86E /* ViewController.swift in Sources */,
+				A708AB2A283233DC0015656B /* ViewControllerHome.swift in Sources */,
+				A722B624282D06B0000B4134 /* Partita.swift in Sources */,
 				A784848728243CD70099E86E /* AppDelegate.swift in Sources */,
+				A788AADC2834407300A19F82 /* ViewControllerMazzo.swift in Sources */,
+				A7778F822832E75600687036 /* Nodo.swift in Sources */,
 				A784848928243CD70099E86E /* SceneDelegate.swift in Sources */,
+				A722B626282D0D68000B4134 /* Tessera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

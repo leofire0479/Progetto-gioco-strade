@@ -1,24 +1,1331 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rwQ-oV-UXc">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller Home-->
+        <scene sceneID="2aj-JV-Ihj">
+            <objects>
+                <viewController id="rwQ-oV-UXc" customClass="ViewControllerHome" customModule="Progetto_Gioco_con_Strade" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9KU-Hk-JQO">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GIOCO STRADE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cz-Uc-u2a">
+                                <rect key="frame" x="135" y="66" width="550" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7O-bs-cV9">
+                                <rect key="frame" x="246" y="912" width="329" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="rwQ-oV-UXc" eventType="touchUpInside" id="GoH-oW-gGq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-SA-QXR">
+                                <rect key="frame" x="300" y="563" width="220" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="PREPARA MAZZO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="APO-W8-YZz" kind="presentation" identifier="homeToMazzo" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="m9d-9Z-YOG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZOU-TZ-cxo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TSk-Ko-ZII"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeToGioco" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dsy-Pa-Wuq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Oa-qb-B2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-946.09756097560978" y="-694.06779661016958"/>
+        </scene>
+        <!--View Controller Mazzo-->
+        <scene sceneID="Q8j-rX-zBx">
+            <objects>
+                <viewController id="APO-W8-YZz" customClass="ViewControllerMazzo" customModule="Progetto_Gioco_con_Strade" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yct-Dp-4Bm">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ3-0F-HJt">
+                                <rect key="frame" x="52" y="506" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mv-n0-FBZ">
+                                <rect key="frame" x="618" y="506" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTALE: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P01-S2-KpR">
+                                <rect key="frame" x="335" y="1021" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dae-Lb-KHs">
+                                <rect key="frame" x="335" y="506" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJK-Br-3LS">
+                                <rect key="frame" x="618" y="766" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-ZM-kW7">
+                                <rect key="frame" x="335" y="766" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-ND-K1i">
+                                <rect key="frame" x="52" y="766" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2zI-1b-9Cf">
+                                <rect key="frame" x="80" y="265" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="qwh-LV-jQm"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-cs-vSP">
+                                <rect key="frame" x="80" y="535" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="4Hn-eX-YPu"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="KDH-1j-vbp">
+                                <rect key="frame" x="363" y="265" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="LqT-sO-jek"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7AA-Wl-JKJ">
+                                <rect key="frame" x="646" y="265" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="aN8-bi-0uX"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VUf-KW-eAA">
+                                <rect key="frame" x="363" y="535" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="iuy-ow-c36"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rXT-Wl-9RJ">
+                                <rect key="frame" x="646" y="535" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="Zsr-0o-IbV"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7jC-R8-Lkq">
+                                <rect key="frame" x="80" y="795" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="gX7-YJ-pNf"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HbT-uu-aKL">
+                                <rect key="frame" x="363" y="795" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="oOJ-xd-f7M"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kqX-OC-yx3">
+                                <rect key="frame" x="646" y="795" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="lhd-yJ-H6L"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYs-KX-bMm">
+                                <rect key="frame" x="52" y="236" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vE-WC-ghT">
+                                <rect key="frame" x="618" y="236" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76a-v1-rAS">
+                                <rect key="frame" x="335" y="236" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10 21" translatesAutoresizingMaskIntoConstraints="NO" id="4Dq-Xq-vTI">
+                                <rect key="frame" x="618" y="78" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10 3" translatesAutoresizingMaskIntoConstraints="NO" id="WZv-Tm-WC4">
+                                <rect key="frame" x="335" y="78" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10 0" translatesAutoresizingMaskIntoConstraints="NO" id="v6w-R6-Suh">
+                                <rect key="frame" x="52" y="78" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="70 3" translatesAutoresizingMaskIntoConstraints="NO" id="fp7-rB-tgJ">
+                                <rect key="frame" x="618" y="608" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="70 0" translatesAutoresizingMaskIntoConstraints="NO" id="kWW-dv-8Od">
+                                <rect key="frame" x="335" y="608" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="35 6" translatesAutoresizingMaskIntoConstraints="NO" id="4HW-0Q-5LU">
+                                <rect key="frame" x="52" y="608" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="210 0" translatesAutoresizingMaskIntoConstraints="NO" id="iow-5W-HQn">
+                                <rect key="frame" x="52" y="863" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="35 3" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-Ux-utb">
+                                <rect key="frame" x="618" y="348" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="35 2" translatesAutoresizingMaskIntoConstraints="NO" id="Nac-eV-seP">
+                                <rect key="frame" x="335" y="348" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="35 0" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-9u-coW">
+                                <rect key="frame" x="52" y="348" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-qb-5zf">
+                                <rect key="frame" x="335" y="863" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="mazzoCompleto:" destination="APO-W8-YZz" eventType="touchUpInside" id="i3j-IG-qaQ"/>
+                                    <segue destination="rwQ-oV-UXc" kind="presentation" identifier="mazzoToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mcN-5z-zqk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtM-Lo-Md5">
+                                <rect key="frame" x="52" y="1021" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-uh-vZD">
+                                <rect key="frame" x="80" y="1050" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedStepper:" destination="APO-W8-YZz" eventType="valueChanged" id="1lf-aS-8qf"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-NB-7uP">
+                                <rect key="frame" x="427" y="1021" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZY7-zE-JK6">
+                                <rect key="frame" x="237" y="1061" width="346" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O1S-N8-EQi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnHome" destination="y0d-qb-5zf" id="3DI-q3-9Vq"/>
+                        <outlet property="lblTot" destination="HT2-NB-7uP" id="9kf-5j-8Yi"/>
+                        <outletCollection property="stepper" destination="2zI-1b-9Cf" collectionClass="NSMutableArray" id="dPC-pW-jNe"/>
+                        <outletCollection property="stepper" destination="KDH-1j-vbp" collectionClass="NSMutableArray" id="2RM-Ax-ofd"/>
+                        <outletCollection property="stepper" destination="7AA-Wl-JKJ" collectionClass="NSMutableArray" id="fWu-pC-TOz"/>
+                        <outletCollection property="stepper" destination="aQa-cs-vSP" collectionClass="NSMutableArray" id="tMI-rf-ZgK"/>
+                        <outletCollection property="stepper" destination="VUf-KW-eAA" collectionClass="NSMutableArray" id="223-wK-vOy"/>
+                        <outletCollection property="stepper" destination="rXT-Wl-9RJ" collectionClass="NSMutableArray" id="PTc-KB-GtD"/>
+                        <outletCollection property="stepper" destination="7jC-R8-Lkq" collectionClass="NSMutableArray" id="GCH-zN-H3m"/>
+                        <outletCollection property="stepper" destination="HbT-uu-aKL" collectionClass="NSMutableArray" id="oXB-J3-qiJ"/>
+                        <outletCollection property="stepper" destination="kqX-OC-yx3" collectionClass="NSMutableArray" id="v1Y-8N-M7J"/>
+                        <outletCollection property="stepper" destination="gyN-uh-vZD" collectionClass="NSMutableArray" id="sQ4-Mo-yeQ"/>
+                        <outletCollection property="lbl" destination="CYs-KX-bMm" collectionClass="NSMutableArray" id="saX-9W-n9j"/>
+                        <outletCollection property="lbl" destination="76a-v1-rAS" collectionClass="NSMutableArray" id="fQd-Wc-GRJ"/>
+                        <outletCollection property="lbl" destination="5vE-WC-ghT" collectionClass="NSMutableArray" id="vp4-Ce-TQF"/>
+                        <outletCollection property="lbl" destination="DZ3-0F-HJt" collectionClass="NSMutableArray" id="Os6-8P-R0k"/>
+                        <outletCollection property="lbl" destination="Dae-Lb-KHs" collectionClass="NSMutableArray" id="8lr-vR-VBV"/>
+                        <outletCollection property="lbl" destination="6Mv-n0-FBZ" collectionClass="NSMutableArray" id="zlg-S9-6LI"/>
+                        <outletCollection property="lbl" destination="YA9-ND-K1i" collectionClass="NSMutableArray" id="KM4-L3-qsC"/>
+                        <outletCollection property="lbl" destination="e2m-ZM-kW7" collectionClass="NSMutableArray" id="gAk-5X-rPa"/>
+                        <outletCollection property="lbl" destination="aJK-Br-3LS" collectionClass="NSMutableArray" id="dC8-Sb-CEZ"/>
+                        <outletCollection property="lbl" destination="AtM-Lo-Md5" collectionClass="NSMutableArray" id="I1o-Wb-Vzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGC-4H-w5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-187.3170731707317" y="-696.10169491525426"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Progetto_Gioco_con_Strade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrG-aP-bJp">
+                                <rect key="frame" x="59" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FoO-S3-q7z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBU-PI-kXf">
+                                <rect key="frame" x="59" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koZ-87-nbc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxM-FK-mBC">
+                                <rect key="frame" x="59" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns8-CC-ilF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-sT-wM9">
+                                <rect key="frame" x="59" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjk-bb-wIV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luq-h6-QhX">
+                                <rect key="frame" x="59" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gto-NS-17z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-uE-8ma">
+                                <rect key="frame" x="59" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMT-Fm-CNm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucU-0w-aZQ">
+                                <rect key="frame" x="59" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMd-Sb-XnJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-XL-oSj">
+                                <rect key="frame" x="59" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13f-o6-L6T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-9p-MFU">
+                                <rect key="frame" x="137" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4t-VQ-Sh5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12p-Cx-25D">
+                                <rect key="frame" x="137" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2UP-Fe-k1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq1-pr-QZz">
+                                <rect key="frame" x="137" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVB-MV-dzy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEc-kc-G1N">
+                                <rect key="frame" x="137" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJH-Ou-h8e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-O5-fGY">
+                                <rect key="frame" x="137" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXd-M2-YQX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-rB-aX8">
+                                <rect key="frame" x="137" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZo-O5-N1y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfn-6W-nl6">
+                                <rect key="frame" x="137" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsg-BI-jY9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqW-YX-X1W">
+                                <rect key="frame" x="137" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKS-sn-8jo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-5I-Qoo">
+                                <rect key="frame" x="137" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGr-ib-dzi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDk-AB-B5U">
+                                <rect key="frame" x="215" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpo-dJ-JiY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcS-eC-Vqx">
+                                <rect key="frame" x="215" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0YU-xu-Erc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxd-E3-0bQ">
+                                <rect key="frame" x="215" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThG-bA-W8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99U-ts-4aW">
+                                <rect key="frame" x="215" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fsy-1R-KRW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hln-ZL-Dg0">
+                                <rect key="frame" x="215" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSG-fr-CY1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoZ-wr-XW5">
+                                <rect key="frame" x="215" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJ7-Nx-EJY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx2-dO-4lr">
+                                <rect key="frame" x="215" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UkP-kU-p20"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-LR-aSm">
+                                <rect key="frame" x="215" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xob-aI-7M7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIQ-DT-E44">
+                                <rect key="frame" x="215" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3X-Z9-pXZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le9-T2-zZq">
+                                <rect key="frame" x="293" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nS7-7w-V4l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-Fq-0IA">
+                                <rect key="frame" x="293" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUG-kJ-wmv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjK-sd-uFT">
+                                <rect key="frame" x="293" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nwQ-LP-YbW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-0H-1Y7">
+                                <rect key="frame" x="293" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCK-P2-GrA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qj-aY-RDY">
+                                <rect key="frame" x="293" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kik-bI-L1L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-JO-Iib">
+                                <rect key="frame" x="293" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yim-Sf-ZC0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIT-bW-I7m">
+                                <rect key="frame" x="293" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwk-JO-deS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-lr-DWM">
+                                <rect key="frame" x="293" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9X-yJ-ivT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXG-h5-daN">
+                                <rect key="frame" x="293" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFl-7c-Mdo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmU-7g-PdY">
+                                <rect key="frame" x="371" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJx-nI-Ibe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjh-RW-tIW">
+                                <rect key="frame" x="371" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IO9-d2-RzW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yky-BY-xIT">
+                                <rect key="frame" x="371" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCx-rs-EiW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZO-gl-Xqd">
+                                <rect key="frame" x="371" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uIb-5W-5Wl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H13-Xq-ONH">
+                                <rect key="frame" x="371" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cij-lD-YMd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8f3-xZ-vQl">
+                                <rect key="frame" x="371" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mh6-lr-pdg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcp-oW-bn0">
+                                <rect key="frame" x="371" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPr-1R-CVx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mso-F3-DMY">
+                                <rect key="frame" x="371" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BS-bm-ESZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzA-9K-Xnr">
+                                <rect key="frame" x="371" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOM-Hy-IlQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-SR-QBD">
+                                <rect key="frame" x="449" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVJ-G6-IFX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obI-60-sCD">
+                                <rect key="frame" x="449" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2l-vL-1JP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-7r-Lsj">
+                                <rect key="frame" x="449" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yob-lh-pbi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldF-Zu-sQT">
+                                <rect key="frame" x="449" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8tv-af-mb3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp2-mX-Prl">
+                                <rect key="frame" x="449" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iM-1r-W8c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-G3-ePu">
+                                <rect key="frame" x="449" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JdI-rN-Sj7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pL-J0-zWo">
+                                <rect key="frame" x="449" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O9a-vB-KVv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfZ-bm-PSp">
+                                <rect key="frame" x="449" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOP-I5-GIM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiA-JN-35i">
+                                <rect key="frame" x="449" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8My-J9-kHz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87G-Gg-sfe">
+                                <rect key="frame" x="527" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4u7-Pr-omU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWH-YX-pYh">
+                                <rect key="frame" x="527" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJG-U9-DEA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DD-yb-UK8">
+                                <rect key="frame" x="527" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7Y-Fi-YYt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY6-uL-xRl">
+                                <rect key="frame" x="527" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2g-RA-Umm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM6-e1-zja">
+                                <rect key="frame" x="527" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aA3-hE-6W1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-dE-Dkp">
+                                <rect key="frame" x="527" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JsY-L2-VRT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbW-FR-n02">
+                                <rect key="frame" x="527" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vb-dC-dQB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jF-eF-EKq">
+                                <rect key="frame" x="527" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jse-5r-Edi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wha-Dj-y44">
+                                <rect key="frame" x="527" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3T-bn-r4O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjc-IP-VFf">
+                                <rect key="frame" x="605" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSr-ZK-N9V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBa-lo-dNH">
+                                <rect key="frame" x="605" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3e-IA-PE3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESU-dV-bzw">
+                                <rect key="frame" x="605" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67C-zd-DVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsm-KV-yyB">
+                                <rect key="frame" x="605" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j64-EK-k5C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWf-do-SyS">
+                                <rect key="frame" x="605" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hc1-ds-ym9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVR-Aj-VSh">
+                                <rect key="frame" x="605" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nck-oQ-3Br"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dp3-g6-Zs1">
+                                <rect key="frame" x="605" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ru5-pv-ZJw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFW-KE-Qek">
+                                <rect key="frame" x="605" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kpj-VX-pga"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-R7-uNK">
+                                <rect key="frame" x="605" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFD-F5-CkQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEg-p2-mSP">
+                                <rect key="frame" x="683" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uM9-Hf-Mmm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHb-RD-97Y">
+                                <rect key="frame" x="683" y="696" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnM-D3-6Qg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52J-hV-YAJ">
+                                <rect key="frame" x="683" y="384" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyI-4m-xQS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUS-Nz-C5S">
+                                <rect key="frame" x="683" y="618" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RF2-dV-VTw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-zt-CVe">
+                                <rect key="frame" x="683" y="462" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2s4-GF-c2N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE5-kb-Hwv">
+                                <rect key="frame" x="683" y="306" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gux-Wq-q1i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-TU-axV">
+                                <rect key="frame" x="683" y="228" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eQ1-fS-HnF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIU-en-iIt">
+                                <rect key="frame" x="683" y="150" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoH-UC-1If"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-DS-8la">
+                                <rect key="frame" x="683" y="540" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjF-R7-d2c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-1F-16R">
+                                <rect key="frame" x="22" y="384" width="37" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oas-26-hFe">
+                                <rect key="frame" x="761" y="384" width="37" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNu-Cb-5Rq">
+                                <rect key="frame" x="371" y="35" width="78" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsP-77-GYJ">
+                                <rect key="frame" x="59" y="72" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gV-8t-d7R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ex-ol-9Ny">
+                                <rect key="frame" x="690" y="1094" width="64" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="45"/>
+                                </state>
+                                <connections>
+                                    <action selector="ruotaOrario:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xsn-zt-Jhg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tj-hl-I5g">
+                                <rect key="frame" x="64" y="1094" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="45" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="ruotaAntiorario:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBV-Wb-6LW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWD-Ix-wBw">
+                                <rect key="frame" x="734" y="782" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="casellaClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbb-wm-v74"/>
+                                    <action selector="rigenera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXc-RP-aNu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxc-KS-xwa">
+                                <rect key="frame" x="59" y="43" width="283" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L4-YG-2d7">
+                                <rect key="frame" x="94" y="840" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="10 0"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLf-Pw-wm1">
+                                <rect key="frame" x="222" y="840" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="10 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pl-8n-jYP">
+                                <rect key="frame" x="350" y="841" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="10 21"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kh-ld-fuT">
+                                <rect key="frame" x="478" y="841" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="70 0"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpZ-RM-cv9">
+                                <rect key="frame" x="606" y="841" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="70 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-f4-lej">
+                                <rect key="frame" x="94" y="968" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="35 0"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkD-gx-dl0">
+                                <rect key="frame" x="222" y="968" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="35 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8X1-Cw-9bg">
+                                <rect key="frame" x="350" y="969" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="35 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x67-g6-YSM">
+                                <rect key="frame" x="478" y="969" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="35 6"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70F-tI-EqX">
+                                <rect key="frame" x="606" y="969" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" backgroundImage="210 0"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTk-VQ-wER">
+                                <rect key="frame" x="667" y="774" width="69" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YyM-M4-l07"/>
+                    <connections>
+                        <outlet property="bottoneSelezione" destination="oWD-Ix-wBw" id="Z2V-5l-EW2"/>
+                        <outlet property="imageViewTesseraAttuale" destination="NTk-VQ-wER" id="RfG-Md-GAW"/>
+                        <outlet property="lblOutput" destination="Qxc-KS-xwa" id="Tpz-W9-3cE"/>
+                        <outletCollection property="CampoBottoni" destination="YsP-77-GYJ" collectionClass="NSMutableArray" id="Jeg-Xt-AJe"/>
+                        <outletCollection property="CampoBottoni" destination="sGl-9p-MFU" collectionClass="NSMutableArray" id="Be7-8c-aOU"/>
+                        <outletCollection property="CampoBottoni" destination="iDk-AB-B5U" collectionClass="NSMutableArray" id="4v0-cX-MTB"/>
+                        <outletCollection property="CampoBottoni" destination="le9-T2-zZq" collectionClass="NSMutableArray" id="1XE-RS-v8i"/>
+                        <outletCollection property="CampoBottoni" destination="rmU-7g-PdY" collectionClass="NSMutableArray" id="JNc-hQ-QwP"/>
+                        <outletCollection property="CampoBottoni" destination="6HB-SR-QBD" collectionClass="NSMutableArray" id="Yek-D7-FJ3"/>
+                        <outletCollection property="CampoBottoni" destination="87G-Gg-sfe" collectionClass="NSMutableArray" id="j5R-3G-4wx"/>
+                        <outletCollection property="CampoBottoni" destination="Zjc-IP-VFf" collectionClass="NSMutableArray" id="ACp-hm-0BG"/>
+                        <outletCollection property="CampoBottoni" destination="kEg-p2-mSP" collectionClass="NSMutableArray" id="s9c-7i-6Ok"/>
+                        <outletCollection property="CampoBottoni" destination="fIU-en-iIt" collectionClass="NSMutableArray" id="0iw-bm-5A2"/>
+                        <outletCollection property="CampoBottoni" destination="RFW-KE-Qek" collectionClass="NSMutableArray" id="GUD-NZ-MUF"/>
+                        <outletCollection property="CampoBottoni" destination="1jF-eF-EKq" collectionClass="NSMutableArray" id="jcD-Zu-pTb"/>
+                        <outletCollection property="CampoBottoni" destination="LfZ-bm-PSp" collectionClass="NSMutableArray" id="un5-Ca-Koz"/>
+                        <outletCollection property="CampoBottoni" destination="Mso-F3-DMY" collectionClass="NSMutableArray" id="2qf-vd-TFp"/>
+                        <outletCollection property="CampoBottoni" destination="U5A-lr-DWM" collectionClass="NSMutableArray" id="F00-sW-JGQ"/>
+                        <outletCollection property="CampoBottoni" destination="hIk-TU-axV" collectionClass="NSMutableArray" id="nsN-Da-TKQ"/>
+                        <outletCollection property="CampoBottoni" destination="BIT-bW-I7m" collectionClass="NSMutableArray" id="LSa-CQ-yKi"/>
+                        <outletCollection property="CampoBottoni" destination="Xcp-oW-bn0" collectionClass="NSMutableArray" id="q22-x9-Wth"/>
+                        <outletCollection property="CampoBottoni" destination="7pL-J0-zWo" collectionClass="NSMutableArray" id="O0r-c9-VIB"/>
+                        <outletCollection property="CampoBottoni" destination="bbW-FR-n02" collectionClass="NSMutableArray" id="gxY-bW-L8H"/>
+                        <outletCollection property="CampoBottoni" destination="Dp3-g6-Zs1" collectionClass="NSMutableArray" id="9CW-LJ-FSw"/>
+                        <outletCollection property="CampoBottoni" destination="GE5-kb-Hwv" collectionClass="NSMutableArray" id="PBU-od-fSG"/>
+                        <outletCollection property="CampoBottoni" destination="TVR-Aj-VSh" collectionClass="NSMutableArray" id="pMU-7l-BBK"/>
+                        <outletCollection property="CampoBottoni" destination="ILe-dE-Dkp" collectionClass="NSMutableArray" id="uDs-Cu-E6W"/>
+                        <outletCollection property="CampoBottoni" destination="Nz7-G3-ePu" collectionClass="NSMutableArray" id="iCg-Gd-MYb"/>
+                        <outletCollection property="CampoBottoni" destination="Nz7-G3-ePu" collectionClass="NSMutableArray" id="gyK-Ij-b40"/>
+                        <outletCollection property="CampoBottoni" destination="8f3-xZ-vQl" collectionClass="NSMutableArray" id="9uA-Pc-cMe"/>
+                        <outletCollection property="CampoBottoni" destination="dxa-JO-Iib" collectionClass="NSMutableArray" id="pyd-iP-ow1"/>
+                        <outletCollection property="CampoBottoni" destination="cjK-sd-uFT" collectionClass="NSMutableArray" id="Va2-Hd-luu"/>
+                        <outletCollection property="CampoBottoni" destination="Yky-BY-xIT" collectionClass="NSMutableArray" id="fEr-X3-YxO"/>
+                        <outletCollection property="CampoBottoni" destination="4pU-7r-Lsj" collectionClass="NSMutableArray" id="t5O-3U-75i"/>
+                        <outletCollection property="CampoBottoni" destination="7DD-yb-UK8" collectionClass="NSMutableArray" id="iIm-gw-chQ"/>
+                        <outletCollection property="CampoBottoni" destination="ESU-dV-bzw" collectionClass="NSMutableArray" id="YIv-KJ-7EQ"/>
+                        <outletCollection property="CampoBottoni" destination="52J-hV-YAJ" collectionClass="NSMutableArray" id="y94-Oo-jnr"/>
+                        <outletCollection property="CampoBottoni" destination="3Qj-aY-RDY" collectionClass="NSMutableArray" id="ex7-QP-HYM"/>
+                        <outletCollection property="CampoBottoni" destination="H13-Xq-ONH" collectionClass="NSMutableArray" id="CDS-5e-l8F"/>
+                        <outletCollection property="CampoBottoni" destination="hp2-mX-Prl" collectionClass="NSMutableArray" id="cix-Jm-K3a"/>
+                        <outletCollection property="CampoBottoni" destination="RM6-e1-zja" collectionClass="NSMutableArray" id="Y29-nL-Bg1"/>
+                        <outletCollection property="CampoBottoni" destination="wWf-do-SyS" collectionClass="NSMutableArray" id="wGo-Iw-Bru"/>
+                        <outletCollection property="CampoBottoni" destination="yTR-zt-CVe" collectionClass="NSMutableArray" id="WVu-xx-tcQ"/>
+                        <outletCollection property="CampoBottoni" destination="qXG-h5-daN" collectionClass="NSMutableArray" id="2nM-Bc-fc8"/>
+                        <outletCollection property="CampoBottoni" destination="qzA-9K-Xnr" collectionClass="NSMutableArray" id="pMQ-jR-wjO"/>
+                        <outletCollection property="CampoBottoni" destination="PiA-JN-35i" collectionClass="NSMutableArray" id="9fH-Ve-xdW"/>
+                        <outletCollection property="CampoBottoni" destination="Wha-Dj-y44" collectionClass="NSMutableArray" id="W6o-0U-Iwk"/>
+                        <outletCollection property="CampoBottoni" destination="6A2-R7-uNK" collectionClass="NSMutableArray" id="1ac-BX-z3a"/>
+                        <outletCollection property="CampoBottoni" destination="AlX-DS-8la" collectionClass="NSMutableArray" id="O6x-89-J7j"/>
+                        <outletCollection property="CampoBottoni" destination="EmG-0H-1Y7" collectionClass="NSMutableArray" id="RB7-qU-9hc"/>
+                        <outletCollection property="CampoBottoni" destination="HZO-gl-Xqd" collectionClass="NSMutableArray" id="Rxv-CS-hh8"/>
+                        <outletCollection property="CampoBottoni" destination="ldF-Zu-sQT" collectionClass="NSMutableArray" id="uNX-EH-dBF"/>
+                        <outletCollection property="CampoBottoni" destination="KY6-uL-xRl" collectionClass="NSMutableArray" id="Hd4-xH-INS"/>
+                        <outletCollection property="CampoBottoni" destination="Gsm-KV-yyB" collectionClass="NSMutableArray" id="abA-1Q-4gU"/>
+                        <outletCollection property="CampoBottoni" destination="UUS-Nz-C5S" collectionClass="NSMutableArray" id="65w-rG-jGn"/>
+                        <outletCollection property="CampoBottoni" destination="Uwq-Fq-0IA" collectionClass="NSMutableArray" id="cI8-h8-6tp"/>
+                        <outletCollection property="CampoBottoni" destination="zjh-RW-tIW" collectionClass="NSMutableArray" id="fbP-KD-hie"/>
+                        <outletCollection property="CampoBottoni" destination="obI-60-sCD" collectionClass="NSMutableArray" id="tSF-j5-4MF"/>
+                        <outletCollection property="CampoBottoni" destination="AWH-YX-pYh" collectionClass="NSMutableArray" id="Mdz-h5-akz"/>
+                        <outletCollection property="CampoBottoni" destination="ZBa-lo-dNH" collectionClass="NSMutableArray" id="ABy-Je-wce"/>
+                        <outletCollection property="CampoBottoni" destination="jHb-RD-97Y" collectionClass="NSMutableArray" id="RHH-id-smQ"/>
+                        <outletCollection property="CampoBottoni" destination="Wpp-LR-aSm" collectionClass="NSMutableArray" id="gZl-Tc-Lp3"/>
+                        <outletCollection property="CampoBottoni" destination="lqW-YX-X1W" collectionClass="NSMutableArray" id="fR3-OW-GW1"/>
+                        <outletCollection property="CampoBottoni" destination="ucU-0w-aZQ" collectionClass="NSMutableArray" id="cXc-1P-uNQ"/>
+                        <outletCollection property="CampoBottoni" destination="Cx2-dO-4lr" collectionClass="NSMutableArray" id="o6L-v2-BRT"/>
+                        <outletCollection property="CampoBottoni" destination="Cfn-6W-nl6" collectionClass="NSMutableArray" id="zri-yA-mOE"/>
+                        <outletCollection property="CampoBottoni" destination="Qfd-uE-8ma" collectionClass="NSMutableArray" id="6ND-k6-dfg"/>
+                        <outletCollection property="CampoBottoni" destination="LoZ-wr-XW5" collectionClass="NSMutableArray" id="Zmr-kZ-Xae"/>
+                        <outletCollection property="CampoBottoni" destination="kE9-rB-aX8" collectionClass="NSMutableArray" id="vgI-u1-AAg"/>
+                        <outletCollection property="CampoBottoni" destination="Luq-h6-QhX" collectionClass="NSMutableArray" id="M40-iA-l3R"/>
+                        <outletCollection property="CampoBottoni" destination="Sxd-E3-0bQ" collectionClass="NSMutableArray" id="Ako-zM-9ak"/>
+                        <outletCollection property="CampoBottoni" destination="Nq1-pr-QZz" collectionClass="NSMutableArray" id="HPB-Nv-Zt3"/>
+                        <outletCollection property="CampoBottoni" destination="cBU-PI-kXf" collectionClass="NSMutableArray" id="Cpg-Zh-LeE"/>
+                        <outletCollection property="CampoBottoni" destination="hln-ZL-Dg0" collectionClass="NSMutableArray" id="1Wc-vg-QXh"/>
+                        <outletCollection property="CampoBottoni" destination="9cB-O5-fGY" collectionClass="NSMutableArray" id="64D-S0-YtS"/>
+                        <outletCollection property="CampoBottoni" destination="fy5-sT-wM9" collectionClass="NSMutableArray" id="WM2-Rd-DGf"/>
+                        <outletCollection property="CampoBottoni" destination="PIQ-DT-E44" collectionClass="NSMutableArray" id="DSu-Im-jln"/>
+                        <outletCollection property="CampoBottoni" destination="EnK-5I-Qoo" collectionClass="NSMutableArray" id="3tf-Y8-U8d"/>
+                        <outletCollection property="CampoBottoni" destination="s2W-XL-oSj" collectionClass="NSMutableArray" id="LFy-gJ-7d2"/>
+                        <outletCollection property="CampoBottoni" destination="99U-ts-4aW" collectionClass="NSMutableArray" id="BlZ-tI-tYq"/>
+                        <outletCollection property="CampoBottoni" destination="aEc-kc-G1N" collectionClass="NSMutableArray" id="FHp-OJ-Wdu"/>
+                        <outletCollection property="CampoBottoni" destination="mxM-FK-mBC" collectionClass="NSMutableArray" id="cZT-Xq-YZv"/>
+                        <outletCollection property="CampoBottoni" destination="ZcS-eC-Vqx" collectionClass="NSMutableArray" id="VTa-l9-slj"/>
+                        <outletCollection property="CampoBottoni" destination="12p-Cx-25D" collectionClass="NSMutableArray" id="hPw-zB-klI"/>
+                        <outletCollection property="CampoBottoni" destination="wrG-aP-bJp" collectionClass="NSMutableArray" id="acy-M2-sSy"/>
+                        <outletCollection property="btnRiga0" destination="YsP-77-GYJ" collectionClass="NSMutableArray" id="Bos-Ew-blg"/>
+                        <outletCollection property="btnRiga0" destination="sGl-9p-MFU" collectionClass="NSMutableArray" id="fyL-WX-fgo"/>
+                        <outletCollection property="btnRiga0" destination="iDk-AB-B5U" collectionClass="NSMutableArray" id="eRk-pO-mhV"/>
+                        <outletCollection property="btnRiga0" destination="le9-T2-zZq" collectionClass="NSMutableArray" id="iXd-XW-MhX"/>
+                        <outletCollection property="btnRiga0" destination="rmU-7g-PdY" collectionClass="NSMutableArray" id="imk-Mu-gwb"/>
+                        <outletCollection property="btnRiga0" destination="6HB-SR-QBD" collectionClass="NSMutableArray" id="afM-TI-Bhj"/>
+                        <outletCollection property="btnRiga0" destination="87G-Gg-sfe" collectionClass="NSMutableArray" id="429-Gj-0Dx"/>
+                        <outletCollection property="btnRiga0" destination="Zjc-IP-VFf" collectionClass="NSMutableArray" id="1vC-Ie-zvm"/>
+                        <outletCollection property="btnRiga0" destination="kEg-p2-mSP" collectionClass="NSMutableArray" id="cyC-GL-dMx"/>
+                        <outletCollection property="btnRiga1" destination="ucU-0w-aZQ" collectionClass="NSMutableArray" id="8yR-3e-OwW"/>
+                        <outletCollection property="btnRiga1" destination="lqW-YX-X1W" collectionClass="NSMutableArray" id="FRl-jE-Nr0"/>
+                        <outletCollection property="btnRiga1" destination="Wpp-LR-aSm" collectionClass="NSMutableArray" id="3OI-U0-f4F"/>
+                        <outletCollection property="btnRiga1" destination="U5A-lr-DWM" collectionClass="NSMutableArray" id="KUp-sY-xVv"/>
+                        <outletCollection property="btnRiga1" destination="Mso-F3-DMY" collectionClass="NSMutableArray" id="Uq2-BD-bOJ"/>
+                        <outletCollection property="btnRiga1" destination="LfZ-bm-PSp" collectionClass="NSMutableArray" id="OSc-AM-onh"/>
+                        <outletCollection property="btnRiga1" destination="1jF-eF-EKq" collectionClass="NSMutableArray" id="Khg-Jv-Ybn"/>
+                        <outletCollection property="btnRiga1" destination="RFW-KE-Qek" collectionClass="NSMutableArray" id="dcP-in-qoT"/>
+                        <outletCollection property="btnRiga1" destination="fIU-en-iIt" collectionClass="NSMutableArray" id="xgx-lk-sT8"/>
+                        <outletCollection property="btnRiga2" destination="Qfd-uE-8ma" collectionClass="NSMutableArray" id="RgM-Mr-4uQ"/>
+                        <outletCollection property="btnRiga2" destination="Cfn-6W-nl6" collectionClass="NSMutableArray" id="kF9-At-btO"/>
+                        <outletCollection property="btnRiga2" destination="Cx2-dO-4lr" collectionClass="NSMutableArray" id="bZa-mf-lY5"/>
+                        <outletCollection property="btnRiga2" destination="BIT-bW-I7m" collectionClass="NSMutableArray" id="gYu-12-8VR"/>
+                        <outletCollection property="btnRiga2" destination="Xcp-oW-bn0" collectionClass="NSMutableArray" id="G2a-NH-0zi"/>
+                        <outletCollection property="btnRiga2" destination="7pL-J0-zWo" collectionClass="NSMutableArray" id="o4G-Ul-Vcn"/>
+                        <outletCollection property="btnRiga2" destination="bbW-FR-n02" collectionClass="NSMutableArray" id="AXZ-0Q-8Ym"/>
+                        <outletCollection property="btnRiga2" destination="Dp3-g6-Zs1" collectionClass="NSMutableArray" id="JfI-Z4-HGZ"/>
+                        <outletCollection property="btnRiga2" destination="hIk-TU-axV" collectionClass="NSMutableArray" id="3RT-Xy-FUd"/>
+                        <outletCollection property="btnRiga3" destination="Luq-h6-QhX" collectionClass="NSMutableArray" id="9sY-Xn-Yhu"/>
+                        <outletCollection property="btnRiga3" destination="kE9-rB-aX8" collectionClass="NSMutableArray" id="Yyj-qz-8BS"/>
+                        <outletCollection property="btnRiga3" destination="LoZ-wr-XW5" collectionClass="NSMutableArray" id="23z-BZ-Mr9"/>
+                        <outletCollection property="btnRiga3" destination="dxa-JO-Iib" collectionClass="NSMutableArray" id="52Z-LV-Rcc"/>
+                        <outletCollection property="btnRiga3" destination="8f3-xZ-vQl" collectionClass="NSMutableArray" id="zcl-Id-5FW"/>
+                        <outletCollection property="btnRiga3" destination="Nz7-G3-ePu" collectionClass="NSMutableArray" id="Tib-EI-fMh"/>
+                        <outletCollection property="btnRiga3" destination="ILe-dE-Dkp" collectionClass="NSMutableArray" id="4nD-jk-nWp"/>
+                        <outletCollection property="btnRiga3" destination="TVR-Aj-VSh" collectionClass="NSMutableArray" id="Pmj-nD-vz7"/>
+                        <outletCollection property="btnRiga3" destination="GE5-kb-Hwv" collectionClass="NSMutableArray" id="Fa1-Gc-cww"/>
+                        <outletCollection property="btnRiga4" destination="cBU-PI-kXf" collectionClass="NSMutableArray" id="OBJ-X2-BXt"/>
+                        <outletCollection property="btnRiga4" destination="Nq1-pr-QZz" collectionClass="NSMutableArray" id="BrV-bg-lPw"/>
+                        <outletCollection property="btnRiga4" destination="Sxd-E3-0bQ" collectionClass="NSMutableArray" id="XPA-r7-uzo"/>
+                        <outletCollection property="btnRiga4" destination="cjK-sd-uFT" collectionClass="NSMutableArray" id="RwX-09-c1e"/>
+                        <outletCollection property="btnRiga4" destination="Yky-BY-xIT" collectionClass="NSMutableArray" id="HAj-GO-Qv3"/>
+                        <outletCollection property="btnRiga4" destination="4pU-7r-Lsj" collectionClass="NSMutableArray" id="msc-h9-F6s"/>
+                        <outletCollection property="btnRiga4" destination="7DD-yb-UK8" collectionClass="NSMutableArray" id="Rzw-s0-m6m"/>
+                        <outletCollection property="btnRiga4" destination="ESU-dV-bzw" collectionClass="NSMutableArray" id="Mmt-Hb-4Vk"/>
+                        <outletCollection property="btnRiga4" destination="52J-hV-YAJ" collectionClass="NSMutableArray" id="gJO-CN-88F"/>
+                        <outletCollection property="btnRiga5" destination="fy5-sT-wM9" collectionClass="NSMutableArray" id="jFe-0B-hpM"/>
+                        <outletCollection property="btnRiga5" destination="9cB-O5-fGY" collectionClass="NSMutableArray" id="i46-SC-wpn"/>
+                        <outletCollection property="btnRiga5" destination="hln-ZL-Dg0" collectionClass="NSMutableArray" id="eb2-WM-D9F"/>
+                        <outletCollection property="btnRiga5" destination="3Qj-aY-RDY" collectionClass="NSMutableArray" id="WCS-Kg-ITT"/>
+                        <outletCollection property="btnRiga5" destination="H13-Xq-ONH" collectionClass="NSMutableArray" id="NfC-S9-WfA"/>
+                        <outletCollection property="btnRiga5" destination="hp2-mX-Prl" collectionClass="NSMutableArray" id="01u-gf-1nh"/>
+                        <outletCollection property="btnRiga5" destination="RM6-e1-zja" collectionClass="NSMutableArray" id="JgH-wq-q14"/>
+                        <outletCollection property="btnRiga5" destination="wWf-do-SyS" collectionClass="NSMutableArray" id="k4g-fb-dMb"/>
+                        <outletCollection property="btnRiga5" destination="yTR-zt-CVe" collectionClass="NSMutableArray" id="YxW-dw-Z5i"/>
+                        <outletCollection property="btnRiga7" destination="mxM-FK-mBC" collectionClass="NSMutableArray" id="rO2-KS-oEb"/>
+                        <outletCollection property="btnRiga6" destination="s2W-XL-oSj" collectionClass="NSMutableArray" id="Dz8-R6-xS9"/>
+                        <outletCollection property="btnRiga6" destination="EnK-5I-Qoo" collectionClass="NSMutableArray" id="K1d-xn-crD"/>
+                        <outletCollection property="btnRiga6" destination="PIQ-DT-E44" collectionClass="NSMutableArray" id="5RE-23-g7z"/>
+                        <outletCollection property="btnRiga6" destination="qXG-h5-daN" collectionClass="NSMutableArray" id="5Rf-U5-fiY"/>
+                        <outletCollection property="btnRiga6" destination="qzA-9K-Xnr" collectionClass="NSMutableArray" id="R3F-ag-oHP"/>
+                        <outletCollection property="btnRiga6" destination="PiA-JN-35i" collectionClass="NSMutableArray" id="vAG-3r-BaP"/>
+                        <outletCollection property="btnRiga6" destination="Wha-Dj-y44" collectionClass="NSMutableArray" id="hi7-6q-9xN"/>
+                        <outletCollection property="btnRiga6" destination="6A2-R7-uNK" collectionClass="NSMutableArray" id="ZYA-Pl-4h5"/>
+                        <outletCollection property="btnRiga6" destination="AlX-DS-8la" collectionClass="NSMutableArray" id="RNq-x4-tnJ"/>
+                        <outletCollection property="btnRiga7" destination="aEc-kc-G1N" collectionClass="NSMutableArray" id="10p-ON-IW8"/>
+                        <outletCollection property="btnRiga7" destination="99U-ts-4aW" collectionClass="NSMutableArray" id="SXo-0u-mMR"/>
+                        <outletCollection property="btnRiga7" destination="EmG-0H-1Y7" collectionClass="NSMutableArray" id="KC1-A2-ihb"/>
+                        <outletCollection property="btnRiga7" destination="HZO-gl-Xqd" collectionClass="NSMutableArray" id="Z42-8V-PY9"/>
+                        <outletCollection property="btnRiga7" destination="ldF-Zu-sQT" collectionClass="NSMutableArray" id="Ddo-V9-j4t"/>
+                        <outletCollection property="btnRiga7" destination="KY6-uL-xRl" collectionClass="NSMutableArray" id="rzm-qH-TID"/>
+                        <outletCollection property="btnRiga7" destination="Gsm-KV-yyB" collectionClass="NSMutableArray" id="KyT-lA-Imy"/>
+                        <outletCollection property="btnRiga7" destination="UUS-Nz-C5S" collectionClass="NSMutableArray" id="JLP-S8-6Ob"/>
+                        <outletCollection property="btnRiga8" destination="wrG-aP-bJp" collectionClass="NSMutableArray" id="1Fg-Gz-djC"/>
+                        <outletCollection property="btnRiga8" destination="12p-Cx-25D" collectionClass="NSMutableArray" id="b4P-1h-KNh"/>
+                        <outletCollection property="btnRiga8" destination="ZcS-eC-Vqx" collectionClass="NSMutableArray" id="a38-dI-gvQ"/>
+                        <outletCollection property="btnRiga8" destination="Uwq-Fq-0IA" collectionClass="NSMutableArray" id="kV8-He-w9K"/>
+                        <outletCollection property="btnRiga8" destination="zjh-RW-tIW" collectionClass="NSMutableArray" id="Np7-kl-OOa"/>
+                        <outletCollection property="btnRiga8" destination="obI-60-sCD" collectionClass="NSMutableArray" id="iK7-dJ-Dkm"/>
+                        <outletCollection property="btnRiga8" destination="AWH-YX-pYh" collectionClass="NSMutableArray" id="q1C-m3-QUK"/>
+                        <outletCollection property="btnRiga8" destination="ZBa-lo-dNH" collectionClass="NSMutableArray" id="RM8-iu-eYs"/>
+                        <outletCollection property="btnRiga8" destination="jHb-RD-97Y" collectionClass="NSMutableArray" id="e14-TK-quX"/>
+                        <outletCollection property="selezioneTessera" destination="2L4-YG-2d7" collectionClass="NSMutableArray" id="aU0-KC-1kV"/>
+                        <outletCollection property="selezioneTessera" destination="qLf-Pw-wm1" collectionClass="NSMutableArray" id="5Th-eL-DRQ"/>
+                        <outletCollection property="selezioneTessera" destination="9pl-8n-jYP" collectionClass="NSMutableArray" id="kWr-VC-dTM"/>
+                        <outletCollection property="selezioneTessera" destination="6Kh-ld-fuT" collectionClass="NSMutableArray" id="jbb-8g-xGs"/>
+                        <outletCollection property="selezioneTessera" destination="IpZ-RM-cv9" collectionClass="NSMutableArray" id="ba4-kb-rLH"/>
+                        <outletCollection property="selezioneTessera" destination="70F-tI-EqX" collectionClass="NSMutableArray" id="RFY-jO-9pe"/>
+                        <outletCollection property="selezioneTessera" destination="x67-g6-YSM" collectionClass="NSMutableArray" id="rPb-QP-r9F"/>
+                        <outletCollection property="selezioneTessera" destination="8X1-Cw-9bg" collectionClass="NSMutableArray" id="bh9-Ef-pn1"/>
+                        <outletCollection property="selezioneTessera" destination="DkD-gx-dl0" collectionClass="NSMutableArray" id="dNE-b8-axa"/>
+                        <outletCollection property="selezioneTessera" destination="wQb-f4-lej" collectionClass="NSMutableArray" id="MPv-fr-a0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="518.78048780487802" y="-696.10169491525426"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="10 0" width="1084" height="1084"/>
+        <image name="10 21" width="1084" height="1084"/>
+        <image name="10 3" width="1084" height="1084"/>
+        <image name="210 0" width="1084" height="1087"/>
+        <image name="35 0" width="1084" height="1084"/>
+        <image name="35 2" width="1084" height="1084"/>
+        <image name="35 3" width="1084" height="1084"/>
+        <image name="35 6" width="1084" height="1084"/>
+        <image name="70 0" width="1084" height="1086"/>
+        <image name="70 3" width="1084" height="1086"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
