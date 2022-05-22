@@ -9,7 +9,7 @@ import Foundation
 
 class Partita {
     
-    var mat = Array(repeating: Array(repeating: Tessera(id: 0, ChiuseID: 0, PlayerID: 0), count: 9), count: 9)
+    var mat:[[Tessera]] /*= Array(repeating: Array(repeating: Tessera(id: 0, ChiuseID: 0, PlayerID: 0), count: 9), count: 9)*/
     
     var mazzoPlayer1:[Int] = []
     var mazzoPlayer2:[Int] = []
@@ -21,6 +21,15 @@ class Partita {
     
     init(NumPlayer:Int) {
         numPlayer = NumPlayer
+        mat=[]
+        for i in 0...8
+        {
+            mat.append([])
+            for _ in 0...8
+            {
+                mat[i].append(Tessera(id: 0, ChiuseID: 0, PlayerID: 0))
+            }
+        }
     }
     
     func piazzaTessera(i:Int, j:Int, tessera:Tessera) -> Bool{
@@ -58,7 +67,7 @@ class Partita {
         if i < mat.count-1 {
             if mat[i+1][j].ID != 0 {
                 if tessera.ID%7 == 0 {
-                    if mat[i+1][j].chiuseID%3 == 0 {
+                    if mat[i+1][j].ID%3 == 0 {
                         tessera.nodo.aggungiNodoCollegato(n: mat[i+1][j].nodo, PlayerID: turno)
                     }
                 }
@@ -67,7 +76,7 @@ class Partita {
 
         let isVittoria = verificaVittoia(partenza: mat[4][4].nodo, playerID: turno)
         turno+=1
-        if turno > numPlayer {
+        if turno >= numPlayer {
             turno = 0
         }
         return isVittoria
@@ -179,11 +188,10 @@ class Partita {
         var visitati:[Nodo] = []
         var ris = false
         
-        
         while daVisitare.count > 0 && !ris {
             
             if ris == false {
-                if daVisitare[0].isDestinazione && daVisitare[0].playerID == playerID {
+                if daVisitare[0].isDestinazione /*&& daVisitare[0].playerID == playerID */{
                     ris = true
                 } else {
                     for c in daVisitare[0].nCollegati {

@@ -14,18 +14,18 @@ class ViewControllerMazzo: UIViewController {
     @IBOutlet weak var lblTot: UILabel!
     @IBOutlet weak var btnHome: UIButton!
     
-    var mazzoPlayer1:[Int] = Array.init(repeating: 0, count: 10)
-    var mazzoPlayer2:[Int] = Array.init(repeating: 0, count: 10)
-    var mazzoPlayer3:[Int] = Array.init(repeating: 0, count: 10)
+    var mazzoPlayer1:[Int] = Array.init(repeating: 4, count: 10)
+    var mazzoPlayer2:[Int] = Array.init(repeating: 4, count: 10)
+    var mazzoPlayer3:[Int] = Array.init(repeating: 4, count: 10)
     
-    var totale = 100
+    var totale = 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
         for s in stepper {
-            s.maximumValue = 100
-            s.stepValue = 5
-            s.value = 10
+            s.maximumValue = 40
+            s.stepValue = 2
+            s.value = 4
         }
     }
     
@@ -42,7 +42,7 @@ class ViewControllerMazzo: UIViewController {
             totale = totale + Int(s.value)
         }
         lblTot.text! = totale.description
-        if totale == 100 {
+        if totale == 40 {
             btnHome.isEnabled = true
             btnHome.backgroundColor = UIColor.systemYellow
         } else {

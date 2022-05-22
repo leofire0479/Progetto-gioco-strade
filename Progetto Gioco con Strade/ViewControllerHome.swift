@@ -9,9 +9,9 @@ import UIKit
 
 class ViewControllerHome: UIViewController {
 
-    var mazzoPlayer1:[Int] = []
-    var mazzoPlayer2:[Int] = []
-    var mazzoPlayer3:[Int] = []
+    var mazzoPlayer1:[Int] = Array.init(repeating: 4, count: 10)
+    var mazzoPlayer2:[Int] = Array.init(repeating: 4, count: 10)
+    var mazzoPlayer3:[Int] = Array.init(repeating: 4, count: 10)
     
     
     

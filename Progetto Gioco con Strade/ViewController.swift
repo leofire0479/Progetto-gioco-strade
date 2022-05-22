@@ -24,20 +24,26 @@ class ViewController: UIViewController {
     @IBOutlet var btnRiga7: [UIButton]!
     @IBOutlet var btnRiga8: [UIButton]!
     
-    @IBOutlet var selezioneTessera: [UIButton]!
     
-    @IBOutlet weak var bottoneSelezione: UIButton!
-    @IBOutlet weak var imageViewTesseraAttuale: UIImageView!
+    @IBOutlet var manoTessere: [UIButton]!
+    var btnManoSelezionato = UIButton()
+    
+    @IBOutlet weak var imageViewVittoria: UIImageView!
     @IBOutlet weak var lblOutput: UILabel!
+    @IBOutlet var btnHome: UIButton!
     
     var partita:Partita? = nil
     var mazzoPlayer1:[Int] = []
     var mazzoPlayer2:[Int] = []
     var mazzoPlayer3:[Int] = []
+    var arrMazzoPlayer:[[Int]] = []
     var numDiGiocatori = 0
     var playerAttuale = 0
     var matriceBottoni:[[UIButton]] = []
+    
     var tesseraAttuale:Tessera = Tessera(id: 210, ChiuseID: 0, PlayerID: 0)
+    var bottoneAttuale = UIButton()
+    
     
     var dizionarioNumImg = [ 6: [0:UIImage(named: "6 0"),
                                   5:UIImage(named: "6 5"),
@@ -86,57 +92,126 @@ class ViewController: UIViewController {
         matriceBottoni.append(btnRiga7)
         matriceBottoni.append(btnRiga8)
         
+        for b in manoTessere {
+            b.layer.borderColor = UIColor.systemYellow.cgColor
+        }
+        
         partita = Partita(NumPlayer: numDiGiocatori)
         
-        matriceBottoni[4][4].setImage(dizionarioNumImg[210]![0]!, for: UIControl.State.normal)
+        arrMazzoPlayer.append(mazzoPlayer1)
+        arrMazzoPlayer.append(mazzoPlayer2)
+        arrMazzoPlayer.append(mazzoPlayer3)
+        
+        matriceBottoni[4][4].setImage(dizionarioNumImg[210]![0]!, for: UIControl.State.disabled)
+        matriceBottoni[4][4].isEnabled = false
         partita!.piazzaTessera(i: 4, j: 4, tessera: tesseraAttuale)
-        generaNuovaCasella()
+        lblOutput.text = "turno del player 1"
+        //generaNuovaCasella()
     }
-
     
-    @IBAction func ruotaOrario(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.imageViewTesseraAttuale.transform = self.imageViewTesseraAttuale.transform.rotated(by: .pi/2)
-        })
-        tesseraAttuale.ruotaDestra()
-        mostraMossePossibili()
+    @IBAction func selezioneTesseraClick(_ sender: UIButton) {
+        for b in manoTessere {
+            b.layer.borderWidth = 0.0
         }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.bottoneAttuale.transform = CGAffineTransform(rotationAngle: 0)
+        }) //reset rotazione
+        bottoneAttuale = sender
+        sender.layer.borderWidth = 6.0
+        btnManoSelezionato = sender
+        var i = 0
+        while i < 10 {
+            if manoTessere[i] == sender{
+                switch i {
+                case 0:
+                    tesseraAttuale = Tessera(id: 10, ChiuseID: 0, PlayerID: partita!.turno)
+                case 1:
+                    tesseraAttuale = Tessera(id: 10, ChiuseID: 3, PlayerID: partita!.turno)
+                case 2:
+                    tesseraAttuale = Tessera(id: 10, ChiuseID: 21, PlayerID: partita!.turno)
+                case 3:
+                    tesseraAttuale = Tessera(id: 70, ChiuseID: 0, PlayerID: partita!.turno)
+                case 4:
+                    tesseraAttuale = Tessera(id: 70, ChiuseID: 3, PlayerID: partita!.turno)
+                case 5:
+                    tesseraAttuale = Tessera(id: 35, ChiuseID: 0, PlayerID: partita!.turno)
+                case 6:
+                    tesseraAttuale = Tessera(id: 35, ChiuseID: 2, PlayerID: partita!.turno)
+                case 7:
+                    tesseraAttuale = Tessera(id: 35, ChiuseID: 3, PlayerID: partita!.turno)
+                case 8:
+                    tesseraAttuale = Tessera(id: 35, ChiuseID: 6, PlayerID: partita!.turno)
+                case 9:
+                    tesseraAttuale = Tessera(id: 210, ChiuseID: 0, PlayerID: partita!.turno)
+                default:
+                    return
+                }
+                mostraMossePossibili()
+            }
+            i+=1
+        }
+    }
     
-    @IBAction func ruotaAntiorario(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.imageViewTesseraAttuale.transform = self.imageViewTesseraAttuale.transform.rotated(by: .pi/(-2))
-        })
-        tesseraAttuale.ruotaSinistra()
-        mostraMossePossibili()
-        }
     
     @IBAction func casellaClick(_ sender: UIButton, forEvent event: UIEvent) {
-        var i:Int = 0
-        var j:Int = 0
-        while i < 9 {
-            j = 0
-            while j < 9 {
-                let appo = matriceBottoni[i][j]
-                if sender === appo {
-                    if partita!.verificaSePiazzabile(i: i, j: j, tessera: tesseraAttuale) {
-                        sender.setImage(dizionarioNumImg[tesseraAttuale.ID]![tesseraAttuale.chiuseID]!, for: UIControl.State.normal)
-                        if partita!.piazzaTessera(i: i, j: j, tessera: tesseraAttuale) {
-                            var vincitore = 0
-                            if i == 4 && j == 0 {
-                                vincitore = 1
-                            } else if i == 0 && j == 4{
-                                vincitore = 2
-                            } else if i == 4 && j == 8{
-                                vincitore = 3
+        if arrMazzoPlayer[partita!.turno][manoTessere.firstIndex(of: btnManoSelezionato)!] != 0 {
+            var i:Int = 0
+            var j:Int = 0
+            while i < 9 {
+                j = 0
+                while j < 9 {
+                    let appo = matriceBottoni[i][j]
+                    if sender === appo {
+                        if partita!.verificaSePiazzabile(i: i, j: j, tessera: tesseraAttuale) {
+                            
+                            tesseraAttuale = Tessera(id: tesseraAttuale.ID, ChiuseID: tesseraAttuale.chiuseID, PlayerID: partita!.turno)
+                            
+                            sender.setImage(dizionarioNumImg[tesseraAttuale.ID]![tesseraAttuale.chiuseID]!, for: UIControl.State.disabled)
+                            sender.isEnabled = false
+                            lblOutput.text = "turno del player \(partita!.turno + 1)"
+                            
+                            arrMazzoPlayer[partita!.turno][manoTessere.firstIndex(of: btnManoSelezionato)!] -= 1
+                            
+                            
+                            if partita!.piazzaTessera(i: i, j: j, tessera: tesseraAttuale) {
+                                var vincitore = 0
+                                if i == 4 && j == 0 {
+                                    vincitore = 1
+                                } else if i == 0 && j == 4{
+                                    vincitore = 2
+                                } else if i == 4 && j == 8{
+                                    vincitore = 3
+                                }
+                                lblOutput.text = "player \(vincitore) ha vinto"
+                                animazioneVittoria()
+                                for b in CampoBottoni {
+                                    b.isEnabled = false
+                                }
+                                for b in manoTessere {
+                                    b.isEnabled = false
+                                }
+                                for b in manoTessere {
+                                    b.layer.borderWidth = 0.0
+                                }
+                                btnHome.isHidden = false
                             }
-                            lblOutput.text = "player \(vincitore) ha vinto"
+                            var i=0
+                            for n in arrMazzoPlayer[partita!.turno] {
+                                if n == 0 {
+                                    manoTessere[i].isEnabled = false
+                                } else {
+                                    manoTessere[i].isEnabled = true
+                                }
+                                i+=1
+                            }
+                            mostraMossePossibili()
+                            //generaNuovaCasella()
                         }
-                        generaNuovaCasella()
                     }
+                    j += 1
                 }
-                j += 1
+                i += 1
             }
-            i += 1
         }
     }
     
@@ -158,11 +233,46 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func rigenera(_ sender: UIButton) {
-        generaNuovaCasella()
+    @IBAction func ruotaOrario(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.bottoneAttuale.transform = self.bottoneAttuale.transform.rotated(by: .pi/2)
+        })
+        tesseraAttuale = Tessera(id: tesseraAttuale.ID, ChiuseID: tesseraAttuale.chiuseID, PlayerID: partita!.turno)
+        tesseraAttuale.ruotaDestra()
+        mostraMossePossibili()
+        }
+    
+    @IBAction func ruotaAntiorario(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.bottoneAttuale.transform = self.bottoneAttuale.transform.rotated(by: .pi/(-2))
+        })
+        tesseraAttuale = Tessera(id: tesseraAttuale.ID, ChiuseID: tesseraAttuale.chiuseID, PlayerID: partita!.turno)
+        tesseraAttuale.ruotaSinistra()
+        mostraMossePossibili()
+        }
+    
+    func animazioneVittoria() {
+        imageViewVittoria.isHidden = false
+        imageViewVittoria.animationImages = animatedLoad(name: "vittoria")
+        imageViewVittoria.animationDuration = 0.6
+        imageViewVittoria.animationRepeatCount = 0
+        imageViewVittoria.image = imageViewVittoria.animationImages![0]
+        imageViewVittoria.startAnimating()
     }
     
+    func animatedLoad(name: String) -> [UIImage]{
+        var i : Int = 1
+        var ris : [UIImage] = []
+        var img : UIImage? = UIImage(named: "\(name)/\(i)")
+        while img != nil{
+            ris.append(img!)
+            i += 1
+            img = UIImage(named: "\(name)/\(i)")
+        }
+        return ris
+    }
     
+    /*
     func generaNuovaCasella() {
         tesseraAttuale = partita!.creaTesseraRandom()
         bottoneSelezione.setImage(dizionarioNumImg[tesseraAttuale.ID]![tesseraAttuale.chiuseID]! , for: UIControl.State.normal)
@@ -171,7 +281,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.0, animations: {
             self.imageViewTesseraAttuale.transform = CGAffineTransform(rotationAngle: 0)
         }) //reset rotazione
-    }
+    }*/
     
 }
 
