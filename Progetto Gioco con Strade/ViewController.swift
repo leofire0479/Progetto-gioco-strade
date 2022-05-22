@@ -154,7 +154,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func casellaClick(_ sender: UIButton, forEvent event: UIEvent) {
-        if arrMazzoPlayer[partita!.turno][manoTessere.firstIndex(of: btnManoSelezionato)!] != 0 {
+        if manoTessere.firstIndex(of: btnManoSelezionato) != nil && arrMazzoPlayer[partita!.turno][manoTessere.firstIndex(of: btnManoSelezionato)!] != 0 {
             var i:Int = 0
             var j:Int = 0
             while i < 9 {
